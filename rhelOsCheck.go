@@ -19,12 +19,11 @@ func OsCheck() (OsVersion []byte, err error) {
 
         b1 := make([]byte, 1)
         os, err := f.Read(b1)
+        f.Close()
         if err != nil {
-                f.Close()
                 return nil, err
         }
 
-        f.Close()
         return b1[:os], err
 }
 
