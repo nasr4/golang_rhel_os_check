@@ -9,7 +9,6 @@ import (
 func OsCheck() (OsVersion []byte, err error) {
         f, err := os.Open("/etc/redhat-release")
         if err != nil {
-                f.Close()
                 return nil, err
         }
 
