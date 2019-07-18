@@ -1,5 +1,5 @@
 # golang_rhel_os_check
-A simple module to fetch the RedHat release version at runtime.
+A simple module to fetch the RedHat major release version at runtime.
 
 $cat /etc/redhat-release
 
