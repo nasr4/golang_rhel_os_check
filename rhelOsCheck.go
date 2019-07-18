@@ -8,8 +8,6 @@ import (
 //os check for file path
 func OsCheck() (OsVersion []byte, err error) {
         f, err := os.Open("/etc/redhat-release")
-        //b1 := make([]byte, 60)
-        //f.Read(b1)
         if err != nil {
                 return nil, err
         }
@@ -25,7 +23,6 @@ func OsCheck() (OsVersion []byte, err error) {
         }
 
         return b1[:os], err
-        //osCheck = fmt.Printf("%s",string(b1[40]))
 }
 
 func main() {
