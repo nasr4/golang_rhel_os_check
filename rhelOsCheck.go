@@ -3,6 +3,7 @@ package main
 import (
        "os"
        "fmt"
+       "bytes"
 )
 
 //os check for file path
@@ -31,6 +32,10 @@ func main() {
         os, err := OsCheck()
         if err != nil {
                  return
+        }
+
+        if bytes.Equal(os, []byte("6")) {
+                 fmt.Println("yay its rhelon6")
         }
 
         fmt.Printf("%c", os)
