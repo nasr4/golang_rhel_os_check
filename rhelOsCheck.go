@@ -6,7 +6,6 @@ import (
        "bytes"
 )
 
-//os check for file path
 func OsCheck() (OsVersion []byte, err error) {
         f, err := os.Open("/etc/redhat-release")
         if err != nil {
